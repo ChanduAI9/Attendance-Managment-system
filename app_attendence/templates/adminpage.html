@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>admin-page</title>
+    <style class="text/css">
+       
+        /*navbar*/
+        .logo{
+            width: 50px;
+            margin-left:0;
+        }
+        .navbar{
+            width:100%;
+            height:60px;
+            border-bottom-left-radius:15px;
+        }
+        .good img{
+            width: 70%;
+            height:70%;
+            margin:auto;
+            border-radius:20px;
+            margin-left:15px;
+            border: 0.920904px solid #000000;
+            }
+        .good h3{
+            margin-left:45px;
+            }
+        .nav-user{
+            width: 30px;
+        }
+        abbr{
+            text-align: none;
+            cursor: pointer;
+        }
+
+
+        /*side-menu*/
+       a{
+           text-decoration: none;
+           color:none;
+       }
+       .menu-div{
+           background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%); 
+           color: #fff;
+           min-height: 760px;
+            left: 0%;
+            border-right: 1px rgb(255, 255, 255) solid;
+            border-top-right-radius:15px;
+            border-bottom-right-radius:15px;
+
+       }
+       .list-group
+       {
+           width: 100%;
+          
+       }
+       .side-links{
+           padding: 10px 10px;
+           color: rgb(255, 255, 255);
+           font-size: 17px;
+           background-color: inherit;
+           width: 100%;
+           border: none;
+           border-left:  transparent 3px solid;
+           
+       }
+       .side-links:hover {
+           border-left: blue 3px solid;
+           background-image:  linear-gradient(to right, rgb(242, 247, 250), rgb(189, 223, 245));
+       }
+       .on-btn{
+        border-left: blue 3px solid;
+        color: blue;
+        background-image:  linear-gradient(to right, rgb(242, 247, 250),rgb(189, 223, 245));
+       }
+       .logout{
+           padding: 15px;
+           font-size: 17px;
+           margin-bottom: 10px;
+           color: aliceblue;
+       }
+
+       /* content-div */
+       .content-div{
+           background-color: rgb(240, 245, 233);
+           overflow-y: auto;
+           scroll-behavior: smooth;
+           max-height: 780px;
+
+       }    
+       .min-nav{
+            padding: 15px;
+            background-color: rgba(11, 36, 77, 1);
+           border-radius: 10px;
+           display: inline;
+       }
+
+       .side-head{
+           font-weight: 700;
+           padding: 6px 20px;
+           font-size: 25px;
+           background-color: #005;
+           color: #fff;
+           display: inline-table;
+       }
+
+       .btn-opt{
+            padding : 6px 9px;
+           color: white;
+           border-radius: 20px;
+           font-size: 17px;
+           font-weight: 600;
+           border: 2px solid transparent;   
+       }
+       .btn-opt:hover{
+           color:aliceblue ;
+           border: 2px solid white   ;   
+       }
+       
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    
+
+    <!--content-->
+    <div class="container-fluid">
+        <div class="row ">
+            <!--side-menu-->
+            
+            <div class="col-2 col-md-4 col-lg-2   menu-div "  id="menu-opt"> 
+            <div class="col-12  col-xl-2 text-center  ">
+                <a class=" navbar-brand fw-bold " href="#">
+                    <img class="logo" src="https://upload.wikimedia.org/wikipedia/en/b/b8/Rajiv_Gandhi_University_of_Knowledge_Technologies.png">
+                    <abbr title="Rajiv Gandhi University Of Knowledge And Technolgy"><span class="d-xl-inline d-none"> <font color="black">RGUKT</font></span></abbr> <span class="d-xl-none">Attendance Manage System</span>
+                </a>
+            </div><br>  
+            <div class="good">
+            <img  src="https://img.freepik.com/free-photo/young-beautiful-woman-sitting-table_144627-2981.jpg?size=626&ext=jpg&ga=GA1.2.1635999672.1654314140 im" alt=""><h3>Name</h3>
+            </div> &nbsp;                                 
+                <div class="list-group mt-1">
+                    <a href="#" class=" dropright side-links list-group-item "data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard"> <i class="bi bi-envelope"></i> &nbsp;<span class="d-none d-md-inline">Dashboard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="bi bi-chevron-compact-right"></i> </span></a>
+                        
+                        <a class="side-links list-group-item " data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Attendance">
+                        <i class="bi bi-person-square me-2"></i> <span class="d-none d-md-inline">Attendance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-compact-right"></i></span>
+                    </a>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item " href="#"><i class="bi bi-plus-circle-fill me-2"></i> <span class=""> daily</span></a></li>
+                             <li><a class="dropdown-item" href="#"> <i class="bi bi-binoculars-fill me-2"></i> <span class="">weekly</span></a></li>
+                             <li><a class="dropdown-item" href="#"> <i class="bi bi-pen-fill me-2"></i> <span class="drop"> monthly</span></a></li>
+                        </ul>
+                        <a class="side-links list-group-item " data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Statistics">
+                        <i class="bi bi-server me-2"></i> <span class="d-none d-md-inline">Statistics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-compact-right"></i></span>
+                    </a>
+                        <ul class="dropdown-menu" >
+                            <li><a class="dropdown-item " href="#"><i class="bi bi-plus-circle-fill me-2"></i> <span class="">Monthly</span></a></li>
+                             <li><a class="dropdown-item" href="#"> <i class="bi bi-binoculars-fill me-2"></i> <span class="">yearly</span></a></li>
+                             <li><a class="dropdown-item" href="#"> <i class="bi bi-pen-fill me-2"></i> <span class="drop">sem</span></a></li>
+                        </ul>                
+                    <a href="#" class="side-links list-group-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Edit-Profile"> <i class="bi bi-calendar-event"></i> <span class="d-none d-md-inline">Calender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="bi bi-chevron-compact-right"></i> </span> </a>
+                    <a href="reset_password.html" class="side-links list-group-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Reset-password"> <i class="bi bi-shield-lock-fill me-2"></i> <span class="d-none d-md-inline">Subject &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<i class="bi bi-chevron-compact-right"></i></span> </a>
+                </div>
+                
+            </div>
+
+            
+            <!---main-content-->
+            <div class="col   content-div">  
+            <!--navbar-->
+    <nav class="navbar  navbar-light bg-light shadow ">
+        <div class="container-fluid">
+            <div class="col-12    col-xl-10 d-flex">
+               <div> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-opt" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button></div>
+                <div class="d-flex text-dark  ms-auto">
+                <a class="nav-link" href="#"><i class="bi bi-dice-6-fill me-3"></i></a>
+                <a class="nav-link" href="#"><i class="bi bi-bell-slash-fill me-3"></i></a>
+                    <a class="side-links list-group-item " data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" data-bs-toggle="tooltip" data-bs-placement="right" title="profile"> 
+                        <div><img  class="nav-user"src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">   
+                    </a><ul class="dropdown-menu">
+                            <li><a class="dropdown-item " href="#"> <span class="">view profile</span></a></li>
+                             <li><a class="dropdown-item" href="#"> <span class="">edit profile</span></a></li>
+                             <li><a class="dropdown-item" href="#"> <span class="drop">log out</span></a></li>
+                        </ul>  </div>  
+                </div>
+            </div>
+        </div>
+    </nav>  <!--navbar-end--> 
+    <!-- footer -->
+     <footer "mt-auto">
+        <div class="container-fluid footer bg-dark text-light" >
+          <div class="row  text-center justify-content-center">
+            <div class="row  justify-content-center p-2">
+            <div class="col-10 col-md-2">Copyright &copy 2021</div>
+            <div class="col-10 col-md-3"> All rights reserved by RGUKTN</div>
+         </div>
+        </div>
+        </div>
+     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

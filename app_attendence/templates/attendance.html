@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Profile-page</title>
+    <style class="text/css">
+    body{
+         background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+        }
+        .logo{
+            width: 50px;
+            height:50px;
+        }
+
+        abbr{
+            text-align: none;
+            cursor: pointer;
+        }
+        .profile-pic {
+           border-radius: 60%;
+           max-width: 80% ;
+           min-width: 170px;
+       }
+      .container{
+      width:60%;
+      height:560px;
+      border-radius: 15px 10px;
+      box-shadow: 15px 20px 49px -14px #000;
+      }
+
+       }
+       .min-nav{
+            padding: 15px;
+            background-color: rgba(11, 36, 77, 1);
+            border-radius: 10px;
+            display: inline;
+       }
+
+
+      .btn{
+          border-radius: 17px;
+          width:150px;
+      }
+
+      .btn:active{
+          background-color: green;
+      }
+
+
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+  <!--navbar-->
+  <div class="card-header">
+      <div class="d-flex w-100 align-items-center justify-content-between">
+          <h4 class="card-title fw-bold">Class Attendance</h4>
+          <div class="tools">
+          </div>
+      </div>
+  </div>
+  <div class="card-body">
+      <div class="container-fluid">
+          <table class="table table-bordered" id="class-list">
+              <colgroup>
+                  <col width="5%">
+                  <col width="20%">
+                  <col width="20%">
+                  <col width="20%">
+                  <col width="20%">
+                  
+              </colgroup>
+              <thead>
+                  <tr class="bg-gradient bg-primary bg-opacity-50 text-light">
+                      <th class="px-2 py-2 text-center">#</th>
+                      <th class="px-2 py-2 text-center">Teacher Name</th>
+                      <th class="px-2 py-2 text-center">Student ID</th>
+                      <th class="px-2 py-2 text-center">Batch</th>
+                      <th class="px-2 py-2 text-center">Class Name</th>
+
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for class in classes %}
+                  <tr>
+                      <td class="px-2 py-1 align-middle">{{ class.id }}</td>
+                      <td class="px-2 py-1 align-middle">{{ class.professor.first_name }} {{ class.professor.user.last_name }}</td>
+                      <td class="px-2 py-1 align-middle">{{ class.student_id }}</td>
+                      <td class="px-2 py-1 align-middle">{{ class.batch }}</td>
+                      <td class="px-2 py-1 align-middle">{{ class.class_name }}</td>
+
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+   <!-- footer -->
+    <footer class="mt-auto">
+        <div class="container-fluider bg-dark text-light   " >
+        <div class="row  text-center justify-content-center">
+            <div class="row  justify-content-center p-2">
+                <div class="col-10 col-md-2">Copyright &copy 2021</div>
+                <div class="col-10 col-md-3"> All rights reserved by RGUKTN</div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Profile-page</title>
+    <style class="text/css">
+    body{
+         background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+        }
+        .logo{
+            width: 40px;
+        }
+        .nav-user{
+            width: 30px;
+            height:30px;
+        }
+        abbr{
+            text-align: none;
+            cursor: pointer;
+        }
+        .profile-pic {
+           border-radius: 60%;
+           max-width: 80% ;
+           min-width: 170px;
+       }
+      .container{
+      width:60%;
+      border-radius: 15px 10px;
+            box-shadow: 15px 20px 49px -14px #000;
+      }
+
+       }
+       .min-nav{
+            padding: 15px;
+            background-color: rgba(11, 36, 77, 1);
+            border-radius: 10px;
+            display: inline;
+       }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+  <!--navbar-->
+    <nav class="navbar  navbar-light bg-light shadow ">
+        <div class="container-fluid">
+            <div class="col-12  col-xl-2 text-center  ">
+                <a class=" navbar-brand fw-bold " href="#">
+                    <img class="logo" src="https://upload.wikimedia.org/wikipedia/en/b/b8/Rajiv_Gandhi_University_of_Knowledge_Technologies.png">
+                    <abbr title="Attendace Management System"><span class="d-xl-inline d-none">AMS</span></abbr> <span class="d-xl-none">Attendance Management System</span>
+                </a>
+            </div>
+            <div class="col-12    col-xl-10 d-flex">
+                <div class="d-flex text-dark  ms-auto">
+                    <a class="nav-link " href="#">
+                        <img  class="nav-user"src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">
+                        <span class="ms-2 me-1 d-none d-md-inline " > User name</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>  <!--navbar-end-->
+   <center> <h2 class="side-head mt-3" > <i class="bi bi-person-square me-2"></i> My profile</h2></center>
+     <div class="container rounded bg-white mt-4 mb-4">
+    <div class="row">
+        <div class="col-md-4 border-right">
+            <div class="text-center picture-div ">
+                    <img  class="img-fluid  img-rounded profile-pic p-3"src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png">  <!--profile pic-->
+
+                </div>
+                 </div>
+        <div class="col-md-7 border-right">
+            <div class="p-3 py-5"><h4 class="text-right"> Users Details</h4><br>
+                <dl>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Full Name:</label><dd class="ps-4">{{ user.first_name }} {{ user.last_name }}</dd></div>
+                    <div class="col-md-6"><label class="labels">User Name:</label><dd class="ps-4">{{ user.username }}</dd></div>
+                </div> &nbsp;
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Branch:</label><dd class="ps-4">{{ user.profile.branch_name }}</dd></div>
+                    <div class="col-md-6"><label class="labels">Campus:</label><dd class="ps-4">{{ user.profile.campus }}</div>
+                </div>&nbsp;
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">DOB:</label><dd class="ps-4">{{ user.profile.date_of_birth }}</dd></div>
+                    <div class="col-md-6"><label class="labels">Phone Number:</label><dd class="ps-4">{{user.profile.contact }}</dd></div>
+                </div>&nbsp;
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Gender:</label><dd class="ps-4"> {{ user.profile.gender }}</dd></div>
+                    <div class="col-md-6"><label class="labels">Email ID:</label><dd class="ps-4">{{ user.email }}</dd></div>
+                </div>
+              </dl>
+            </div>
+        </div>
+</div>
+</div>
+</div>
+<div class="card-footer">
+  <div class="d-flex w-100 text-end justify-content-end">
+    <a href="{% url 'passwordupdate' %}" class="btn btn btn-primary border btn-sm bg-gradient rounded-0 me-2">Update Password</a>
+    <a href="{% url 'updateprofile' %}" class="btn btn btn-primary btn-sm bg-gradient rounded-0">Update Profile</a>
+  </div>
+</div>
+   <!-- footer -->
+    <footer class="mt-auto">
+        <div class="container-fluider bg-dark text-light   " >
+        <div class="row  text-center justify-content-center">
+            <div class="row  justify-content-center p-2">
+                <div class="col-10 col-md-2">Copyright &copy 2021</div>
+                <div class="col-10 col-md-3"> All rights reserved by RGUKTN</div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
